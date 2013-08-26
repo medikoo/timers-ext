@@ -1,0 +1,25 @@
+{
+  "name": "timers-ext",
+  "version": "0.0.0",
+  "description": "Timers extensions",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "scripts": {
+    "test": "node node_modules/tad/bin/tad"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/timers-ext.git"
+  },
+  "keywords": [
+    "timeout",
+    "delay",
+    "interval",
+    "time",
+    "timer",
+    "timers"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medikoo/timers-ext/issues"
+  }
+}
