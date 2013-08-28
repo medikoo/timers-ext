@@ -1,6 +1,6 @@
 'use strict';
 
-var callable     = require('es5-ext/lib/Object/valid-callable')
+var callable     = require('es5-ext/object/valid-callable')
   , validTimeout = require('./valid-timeout')
 
   , apply = Function.prototype.apply;

@@ -1,6 +1,6 @@
 'use strict';
 
-var toUint   = require('es5-ext/lib/Number/to-uint')
+var toUint   = require('es5-ext/number/to-uint')
   , maxValue = require('./max-value');
 
 module.exports = function (value) {
