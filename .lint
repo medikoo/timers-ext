@@ -12,3 +12,6 @@ nomen
 plusplus
 
 predef+ clearInterval, clearTimeout, setInterval, setTimeout
+
+./once.js
+bitwise

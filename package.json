@@ -20,7 +20,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "es5-ext": "git://github.com/medikoo/es5-ext.git"
+    "es5-ext": "git://github.com/medikoo/es5-ext.git",
+    "next-tick": "git://github.com/medikoo/next-tick.git"
   },
   "bugs": {
     "url": "https://github.com/medikoo/timers-ext/issues"
