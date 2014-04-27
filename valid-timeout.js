@@ -1,11 +1,11 @@
 'use strict';
 
-var toPosInt = require('es5-ext/number/to-pos-integer')
-  , maxValue = require('./max-value');
+var toPosInt   = require('es5-ext/number/to-pos-integer')
+  , maxTimeout = require('./max-timeout');
 
 module.exports = function (value) {
 	value = toPosInt(value);
-	if (value > maxValue) {
+	if (value > maxTimeout) {
 		throw new TypeError(value + " is to large for a timeout");
 	}
 	return value;
