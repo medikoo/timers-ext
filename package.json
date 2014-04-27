@@ -1,11 +1,8 @@
 {
   "name": "timers-ext",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Timers extensions",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
-  "scripts": {
-    "test": "node node_modules/tad/bin/tad"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/medikoo/timers-ext.git"
@@ -18,12 +15,15 @@
     "timer",
     "timers"
   ],
-  "license": "MIT",
   "dependencies": {
-    "es5-ext": "git://github.com/medikoo/es5-ext.git",
-    "next-tick": "git://github.com/medikoo/next-tick.git"
+    "es5-ext": "~0.10.2",
+    "next-tick": "~0.2.2"
   },
-  "bugs": {
-    "url": "https://github.com/medikoo/timers-ext/issues"
-  }
+  "devDependencies": {
+    "tad": "~0.1.21"
+  },
+  "scripts": {
+    "test": "node node_modules/tad/bin/tad"
+  },
+  "license": "MIT"
 }
