@@ -47,8 +47,8 @@ Validates timeout value.
 For `NaN` resolved _timeout_ `0` is returned.
 If _timeout_ resolves to a number:
 - for _timeout < 0_ `0` is returned
-- for _0 >= timeout <= [MAX_TIMEOUT](#max_timeout)_, `timeout` value is returned
-- for _timeout > [MAX_TIMEOUT](#max_timeout)_ exception is thrown
+- for _0 >= timeout <= [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_, `timeout` value is returned
+- for _timeout > [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_ exception is thrown
 
 ### Tests [![Build Status](https://travis-ci.org/medikoo/timers-ext.png)](https://travis-ci.org/medikoo/timers-ext)
 
