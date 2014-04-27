@@ -5,13 +5,13 @@ var callable     = require('es5-ext/object/valid-callable')
   , validTimeout = require('./valid-timeout');
 
 module.exports = function (fn/*, timeout*/) {
-	var scheduled, run, context, args, ntFn, index, timeout = arguments[1];
+	var scheduled, run, context, args, delay, index, timeout = arguments[1];
 	callable(fn);
 	if (timeout === undefined) {
-		ntFn = nextTick;
+		delay = nextTick;
 	} else {
 		timeout = validTimeout(timeout);
-		ntFn = function (cb) { return setTimeout(cb, timeout); };
+		delay = setTimeout;
 	}
 	run = function () {
 		scheduled = false;
@@ -28,6 +28,6 @@ module.exports = function (fn/*, timeout*/) {
 		scheduled = true;
 		context = this;
 		args = arguments;
-		index = ntFn(run);
+		index = delay(run, timeout);
 	};
 };
