@@ -1,14 +1,18 @@
 'use strict';
 
-var callable = require('es5-ext/object/valid-callable')
-  , nextTick = require('next-tick');
+var callable     = require('es5-ext/object/valid-callable')
+  , nextTick     = require('next-tick')
+  , validTimeout = require('./valid-timeout');
 
 module.exports = function (fn/*, timeout*/) {
-	var scheduled, run, context, args, timeout, ntFn, index;
+	var scheduled, run, context, args, ntFn, index, timeout = arguments[1];
 	callable(fn);
-	timeout = arguments[1] >>> 0;
-	if (!timeout) ntFn = nextTick;
-	else ntFn = function (cb) { return setTimeout(cb, timeout); };
+	if (timeout === undefined) {
+		ntFn = nextTick;
+	} else {
+		timeout = validTimeout(timeout);
+		ntFn = function (cb) { return setTimeout(cb, timeout); };
+	}
 	run = function () {
 		scheduled = false;
 		index = null;
