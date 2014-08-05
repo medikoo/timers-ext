@@ -18,7 +18,7 @@ Maximum possible timeout value in milliseconds. It equals to maximum positive va
 Returns function which when invoked will call _fn_ function after specified 
 _timeout_. If _timeout_ is not provided [nextTick](https://github.com/medikoo/next-tick/#next-tick) propagation is used.
 
-#### once(fn[, timeout]) _(timers-ext/timeout)_
+#### once(fn[, timeout]) _(timers-ext/once)_
 
 Makes sure _fn_ function is invoked only once in given _timeout_ span. If _timeout_ is not provided [nextTick](https://github.com/medikoo/next-tick/#next-tick) propagation is used.
 
