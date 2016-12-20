@@ -14,6 +14,7 @@ module.exports = function (fn/*, timeout*/) {
 		delay = setTimeout;
 	}
 	run = function () {
+		if (!scheduled) return; // IE8 tends to not clear immediate timeouts properly
 		scheduled = false;
 		index = null;
 		fn.apply(context, args);
