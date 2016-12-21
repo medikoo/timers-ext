@@ -8,3 +8,5 @@ node_js:
 notifications:
   email:
     - medikoo+timers-ext@medikoo.com
+
+script: "npm test && npm run lint"
