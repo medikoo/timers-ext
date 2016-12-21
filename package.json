@@ -16,11 +16,11 @@
     "timers"
   ],
   "dependencies": {
-    "es5-ext": "~0.10.2",
+    "es5-ext": "~0.10.12",
     "next-tick": "~0.2.2"
   },
   "devDependencies": {
-    "tad": "~0.1.21",
+    "tad": "~0.2.7",
     "xlint": "~0.2.2",
     "xlint-jslint-medikoo": "~0.1.4"
   },
