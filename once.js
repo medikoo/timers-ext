@@ -7,7 +7,7 @@ var callable     = require('es5-ext/object/valid-callable')
 module.exports = function (fn/*, timeout*/) {
 	var scheduled, run, context, args, delay, timeout = arguments[1];
 	callable(fn);
-	if (timeout === undefined) {
+	if (timeout == null) {
 		delay = nextTick;
 	} else {
 		timeout = validTimeout(timeout);
