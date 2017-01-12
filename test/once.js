@@ -28,7 +28,7 @@ module.exports = function (t, a, d) {
 					fn();
 
 					setTimeout(function () {
-						a(called, 1);
+						a(called, 2);
 						d();
 					}, 70);
 				}, 30);

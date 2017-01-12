@@ -5,7 +5,7 @@ var callable     = require('es5-ext/object/valid-callable')
   , validTimeout = require('./valid-timeout');
 
 module.exports = function (fn/*, timeout*/) {
-	var scheduled, run, context, args, delay, index, timeout = arguments[1];
+	var scheduled, run, context, args, delay, timeout = arguments[1];
 	callable(fn);
 	if (timeout === undefined) {
 		delay = nextTick;
@@ -16,19 +16,15 @@ module.exports = function (fn/*, timeout*/) {
 	run = function () {
 		if (!scheduled) return; // IE8 tends to not clear immediate timeouts properly
 		scheduled = false;
-		index = null;
 		fn.apply(context, args);
 		context = null;
 		args = null;
 	};
 	return function () {
-		if (scheduled) {
-			if (index == null) return;
-			clearTimeout(index);
-		}
-		scheduled = true;
 		context = this;
 		args = arguments;
-		index = delay(run, timeout);
+		if (scheduled) return;
+		scheduled = true;
+		delay(run, timeout);
 	};
 };
