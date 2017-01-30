@@ -20,7 +20,7 @@ _timeout_. If _timeout_ is not provided [nextTick](https://github.com/medikoo/ne
 
 #### once(fn[, timeout]) _(timers-ext/once)_
 
-Makes sure _fn_ function is invoked only once in given _timeout_ span. If _timeout_ is not provided [nextTick](https://github.com/medikoo/next-tick/#next-tick) propagation is used.
+Makes sure to execute _fn_ function only once after a defined interval of time (debounce). If _timeout_ is not provided [nextTick](https://github.com/medikoo/next-tick/#next-tick) propagation is used.
 
 
 ```javascript
