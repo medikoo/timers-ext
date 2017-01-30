@@ -1,3 +1,5 @@
+// Debounce function
+
 'use strict';
 
 var callable     = require('es5-ext/object/valid-callable')
@@ -5,7 +7,7 @@ var callable     = require('es5-ext/object/valid-callable')
   , validTimeout = require('./valid-timeout');
 
 module.exports = function (fn/*, timeout*/) {
-	var scheduled, run, context, args, delay, timeout = arguments[1];
+	var scheduled, run, context, args, delay, timeout = arguments[1], handle;
 	callable(fn);
 	if (timeout == null) {
 		delay = nextTick;
@@ -16,15 +18,22 @@ module.exports = function (fn/*, timeout*/) {
 	run = function () {
 		if (!scheduled) return; // IE8 tends to not clear immediate timeouts properly
 		scheduled = false;
+		handle = null;
 		fn.apply(context, args);
 		context = null;
 		args = null;
 	};
 	return function () {
+		if (scheduled) {
+			if (handle == null) {
+				// 'nextTick' based, no room for debounce
+				return;
+			}
+			clearTimeout(handle);
+		}
+		scheduled = true;
 		context = this;
 		args = arguments;
-		if (scheduled) return;
-		scheduled = true;
-		delay(run, timeout);
+		handle = delay(run, timeout);
 	};
 };
