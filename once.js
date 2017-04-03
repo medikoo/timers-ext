@@ -1,4 +1,4 @@
-// It's about debouncing not throttling
+// It's actually "debounce"
 
 'use strict';
 
