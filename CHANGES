@@ -1,3 +1,6 @@
+v0.1.2  --  2017.04.03
+* `throttle` util
+
 v0.1.1  --  2017.03.15
 * Workaround IE8 resolution issue
 * Support any callable objects as callbacks
