@@ -1,3 +1,8 @@
+[![Build status][nix-build-image]][nix-build-url]
+[![Windows status][win-build-image]][win-build-url]
+![Transpilation status][transpilation-image]
+[![npm version][npm-image]][npm-url]
+
 # timers-ext
 
 ## Timers extensions
@@ -51,6 +56,14 @@ If _timeout_ resolves to a number:
 * for _0 >= timeout <= [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_, `timeout` value is returned
 * for _timeout > [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_ exception is thrown
 
-### Tests [![Build Status](https://travis-ci.org/medikoo/timers-ext.png)](https://travis-ci.org/medikoo/timers-ext)
+### Tests
 
     $ npm test
+
+[nix-build-image]: https://semaphoreci.com/api/v1/medikoo/timers-ext/branches/master/shields_badge.svg
+[nix-build-url]: https://semaphoreci.com/medikoo/timers-ext
+[win-build-image]: https://ci.appveyor.com/api/projects/status/2i5nerowov2ho3o9?svg=true
+[win-build-url]: https://ci.appveyor.com/project/medikoo/timers-ext
+[transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
+[npm-image]: https://img.shields.io/npm/v/timers-ext.svg
+[npm-url]: https://www.npmjs.com/package/timers-ext
