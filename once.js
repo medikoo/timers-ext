@@ -4,9 +4,9 @@
 
 var callable     = require("es5-ext/object/valid-callable")
   , nextTick     = require("next-tick")
-  , validTimeout = require("./valid-timeout")
+  , validTimeout = require("./valid-timeout");
 
-  , apply = Function.prototype.apply;
+var apply = Function.prototype.apply;
 
 module.exports = function (fn/*, timeout*/) {
 	var scheduled, run, context, args, delay, timeout = arguments[1], handle;
