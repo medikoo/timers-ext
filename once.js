@@ -1,10 +1,10 @@
 // It's actually "debounce"
 
-'use strict';
+"use strict";
 
-var callable     = require('es5-ext/object/valid-callable')
-  , nextTick     = require('next-tick')
-  , validTimeout = require('./valid-timeout')
+var callable     = require("es5-ext/object/valid-callable")
+  , nextTick     = require("next-tick")
+  , validTimeout = require("./valid-timeout")
 
   , apply = Function.prototype.apply;
 
