@@ -15,7 +15,7 @@ To port it to Browser or any other (non CJS) environment, use your favorite CJS 
 
 ### API
 
-#### MAX_TIMEOUT _(timers-ext/max-timeout)_
+#### MAX*TIMEOUT *(timers-ext/max-timeout)\_
 
 Maximum possible timeout value in milliseconds. It equals to maximum positive value for 32bit signed integer, so _2³¹ (2147483647)_, which makes it around 24.9 days
 
@@ -60,8 +60,8 @@ If _timeout_ resolves to a number:
 
     $ npm test
 
-[nix-build-image]: https://semaphoreci.com/api/v1/medikoo/timers-ext/branches/master/shields_badge.svg
-[nix-build-url]: https://semaphoreci.com/medikoo/timers-ext
+[nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/timers-ext/branches/master/shields_badge.svg
+[nix-build-url]: https://semaphoreci.com/medikoo-org/timers-ext
 [win-build-image]: https://ci.appveyor.com/api/projects/status/2i5nerowov2ho3o9?svg=true
 [win-build-url]: https://ci.appveyor.com/project/medikoo/timers-ext
 [transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
