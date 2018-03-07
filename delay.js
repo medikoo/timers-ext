@@ -2,9 +2,9 @@
 
 var callable     = require("es5-ext/object/valid-callable")
   , nextTick     = require("next-tick")
-  , validTimeout = require("./valid-timeout")
+  , validTimeout = require("./valid-timeout");
 
-  , apply = Function.prototype.apply;
+var apply = Function.prototype.apply;
 
 module.exports = function (fn/*, timeout*/) {
 	var delay, timeout = arguments[1];
@@ -16,6 +16,6 @@ module.exports = function (fn/*, timeout*/) {
 		delay = setTimeout;
 	}
 	return function () {
- return delay(apply.bind(fn, this, arguments), timeout);
-};
+		return delay(apply.bind(fn, this, arguments), timeout);
+	};
 };
