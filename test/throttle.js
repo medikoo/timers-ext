@@ -1,9 +1,10 @@
 "use strict";
 
 module.exports = function (t, a, d) {
-	var called = 0, fn = t(function () {
- ++called;
-}, 50);
+	var called = 0;
+	var fn = t(function () {
+		++called;
+	}, 50);
 
 	fn();
 	a(called, 1);
