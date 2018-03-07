@@ -11,20 +11,25 @@ module.exports = function (t, a, d) {
 	fn();
 	fn();
 	a(called, 1);
+	// Wait 30ms
 	setTimeout(function () {
 		a(called, 1);
 		fn();
+		// Wait 30ms
 		setTimeout(function () {
 			a(called, 2);
 			fn();
 			fn();
 
+			// Wait 20ms
 			setTimeout(function () {
 				a(called, 2);
 
+				// Wait 30ms
 				setTimeout(function () {
 					a(called, 3);
 
+					// Wait 100ms
 					setTimeout(function () {
 						a(called, 3);
 						d();
