@@ -15,7 +15,7 @@ To port it to Browser or any other (non CJS) environment, use your favorite CJS 
 
 ### API
 
-#### MAX*TIMEOUT *(timers-ext/max-timeout)\_
+#### MAX_TIMEOUT _(timers-ext/max-timeout)_
 
 Maximum possible timeout value in milliseconds. It equals to maximum positive value for 32bit signed integer, so _2³¹ (2147483647)_, which makes it around 24.9 days
 
