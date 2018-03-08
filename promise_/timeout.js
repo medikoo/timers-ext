@@ -12,23 +12,25 @@ module.exports = function (/* timeout */) {
 	if (isValue(timeout)) timeout = ensureTimeout(timeout);
 	return new this.constructor(
 		function (resolve, reject) {
-			var isSettled = false;
-			this.then(
-				function (value) {
-					isSettled = true;
-					resolve(value);
-				},
-				function (reason) {
-					isSettled = true;
-					reject(reason);
-				}
-			);
+			var isSettled = false, timeoutId;
 			var timeoutCallback = function () {
 				if (isSettled) return;
 				reject(customError("Operation timeout", "PROMISE_TIMEOUT"));
 			};
-			if (isValue(timeout)) setTimeout(timeoutCallback, timeout);
+			if (isValue(timeout)) timeoutId = setTimeout(timeoutCallback, timeout);
 			else nextTick(timeoutCallback);
+			this.then(
+				function (value) {
+					isSettled = true;
+					clearTimeout(timeoutId);
+					resolve(value);
+				},
+				function (reason) {
+					isSettled = true;
+					clearTimeout(timeoutId);
+					reject(reason);
+				}
+			);
 		}.bind(this)
 	);
 };
