@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/medikoo/timers-ext/compare/v0.1.6...v0.1.7) (2018-10-04)
+
+
+### Bug Fixes
+
+* typo in error message ([36720cf](https://github.com/medikoo/timers-ext/commit/36720cf))
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/medikoo/timers-ext/compare/v0.1.5...v0.1.6) (2018-10-04)
 
