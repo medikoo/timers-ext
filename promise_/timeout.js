@@ -17,7 +17,7 @@ module.exports = function (/* timeout */) {
 				if (isSettled) return;
 				reject(
 					customError(
-						"Operation timeout (exceed " +
+						"Operation timeout (exceeded " +
 							(isValue(timeout) ? timeout + "ms" : "tick") +
 							")",
 						"PROMISE_TIMEOUT"
