@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"eslint": "^8.57.0",
 		"eslint-config-medikoo": "^4.2.0",
+		"git-list-updated": "^1.2.1",
 		"tad": "^3.1.1"
 	},
 	"eslintConfig": {
@@ -33,6 +34,7 @@
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
+		"lint:updated": "pipe-git-updated --base=main --ext=js -- eslint --ignore-pattern '!*'",
 		"test": "node node_modules/tad/bin/tad"
 	},
 	"engines": {
