@@ -2,9 +2,7 @@
 
 module.exports = function (t, a, d) {
 	var invoked, id;
-	id = setTimeout(function () {
- invoked = true;
-}, t);
+	id = setTimeout(function () { invoked = true; }, t);
 	setTimeout(function () {
 		a(invoked, undefined);
 		clearTimeout(id);

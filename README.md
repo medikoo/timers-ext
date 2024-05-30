@@ -30,19 +30,17 @@ Makes sure to execute _fn_ function only once after a defined interval of time (
 
 ```javascript
 var nextTick = require("next-tick");
-var logFoo = function() {
-	console.log("foo");
-};
+var logFoo = function () { console.log("foo"); };
 var logFooOnce = require("timers-ext/once")(logFoo);
 
 logFooOnce();
 logFooOnce(); // ignored, logFoo will be logged only once
 logFooOnce(); // ignored
 
-nextTick(function() {
-	logFooOnce(); // Invokes another log (as tick passed)
-	logFooOnce(); // ignored
-	logFooOnce(); // ignored
+nextTick(function () {
+  logFooOnce(); // Invokes another log (as tick passed)
+  logFooOnce(); // ignored
+  logFooOnce(); // ignored
 });
 ```
 
@@ -52,9 +50,9 @@ Validates timeout value.
 For `NaN` resolved _timeout_ `0` is returned.
 If _timeout_ resolves to a number:
 
--   for _timeout < 0_ `0` is returned
--   for _0 >= timeout <= [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_, `timeout` value is returned
--   for _timeout > [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_ exception is thrown
+- for _timeout < 0_ `0` is returned
+- for _0 >= timeout <= [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_, `timeout` value is returned
+- for _timeout > [MAX_TIMEOUT](#max_timeout-timers-extmax-timeout)_ exception is thrown
 
 ### Tests
 

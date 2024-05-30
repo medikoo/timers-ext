@@ -2,9 +2,7 @@
 
 module.exports = function (t, a, d) {
 	var called = 0;
-	var fn = t(function () {
-		++called;
-	}, 200);
+	var fn = t(function () { ++called; }, 200);
 
 	fn();
 	a(called, 1);

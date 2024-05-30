@@ -3,9 +3,7 @@
 module.exports = function (t, a, d) {
 	var data
 	  , count = 0
-	  , x = function (a, b, c) {
-			data = [this, a, b, c, ++count];
-		}
+	  , x = function (a, b, c) { data = [this, a, b, c, ++count]; }
 	  , y = t(x, 200)
 	  , z = {};
 

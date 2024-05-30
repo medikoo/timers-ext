@@ -26,9 +26,7 @@ module.exports = function (t, a) {
 				}),
 				delay(d)
 			);
-			setTimeout(function () {
-				a(isInvoked, false);
-			}, 50);
+			setTimeout(function () { a(isInvoked, false); }, 50);
 		}
 	};
 };
