@@ -20,6 +20,7 @@
 		"eslint": "^8.57.0",
 		"eslint-config-medikoo": "^4.2.0",
 		"git-list-updated": "^1.2.1",
+		"nyc": "^15.1.0",
 		"prettier-elastic": "^3.2.5",
 		"tad": "^3.1.1"
 	},
@@ -49,7 +50,22 @@
 			}
 		]
 	},
+	"nyc": {
+		"all": true,
+		"exclude": [
+			".github",
+			"coverage/**",
+			"test/**",
+			"*.config.js"
+		],
+		"reporter": [
+			"lcov",
+			"html",
+			"text-summary"
+		]
+	},
 	"scripts": {
+		"coverage": "nyc npm test",
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint:updated": "pipe-git-updated --base=main --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
