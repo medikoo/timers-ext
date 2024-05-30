@@ -20,12 +20,12 @@
 		"next-tick": "^1.0.0"
 	},
 	"devDependencies": {
-		"eslint": "^5.16.0",
-		"eslint-config-medikoo-es5": "^1.7.3",
+		"eslint": "^8.57.0",
+		"eslint-config-medikoo": "^4.2.0",
 		"tad": "^3.1.1"
 	},
 	"eslintConfig": {
-		"extends": "medikoo-es5",
+		"extends": "medikoo/es5",
 		"root": true,
 		"globals": {
 			"clearInterval": true,
