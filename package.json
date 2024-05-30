@@ -38,5 +38,8 @@
 		"lint": "eslint --ignore-path=.gitignore .",
 		"test": "node node_modules/tad/bin/tad"
 	},
+	"engines": {
+		"node": ">=0.12"
+	},
 	"license": "ISC"
 }
