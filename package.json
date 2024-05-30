@@ -1,42 +1,42 @@
 {
-  "name": "timers-ext",
-  "version": "0.1.7",
-  "description": "Timers extensions",
-  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/medikoo/timers-ext.git"
-  },
-  "keywords": [
-    "timeout",
-    "delay",
-    "interval",
-    "time",
-    "timer",
-    "timers"
-  ],
-  "dependencies": {
-    "es5-ext": "^0.10.53",
-    "next-tick": "^1.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-medikoo-es5": "^1.7.3",
-    "tad": "^3.1.1"
-  },
-  "eslintConfig": {
-    "extends": "medikoo-es5",
-    "root": true,
-    "globals": {
-      "clearInterval": true,
-      "clearTimeout": true,
-      "setInterval": true,
-      "setTimeout": true
-    }
-  },
-  "scripts": {
-    "lint": "eslint --ignore-path=.gitignore .",
-    "test": "node node_modules/tad/bin/tad"
-  },
-  "license": "ISC"
+	"name": "timers-ext",
+	"version": "0.1.7",
+	"description": "Timers extensions",
+	"author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/medikoo/timers-ext.git"
+	},
+	"keywords": [
+		"timeout",
+		"delay",
+		"interval",
+		"time",
+		"timer",
+		"timers"
+	],
+	"dependencies": {
+		"es5-ext": "^0.10.53",
+		"next-tick": "^1.0.0"
+	},
+	"devDependencies": {
+		"eslint": "^5.16.0",
+		"eslint-config-medikoo-es5": "^1.7.3",
+		"tad": "^3.1.1"
+	},
+	"eslintConfig": {
+		"extends": "medikoo-es5",
+		"root": true,
+		"globals": {
+			"clearInterval": true,
+			"clearTimeout": true,
+			"setInterval": true,
+			"setTimeout": true
+		}
+	},
+	"scripts": {
+		"lint": "eslint --ignore-path=.gitignore .",
+		"test": "node node_modules/tad/bin/tad"
+	},
+	"license": "ISC"
 }
