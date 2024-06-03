@@ -57,6 +57,10 @@ If _timeout_ resolves to a number:
 
     $ npm test
 
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
+
 [build-image]: https://github.com/medikoo/timers-ext/workflows/Integrate/badge.svg
 [build-url]: https://github.com/medikoo/timers-ext/actions?query=workflow%3AIntegrate
 [cov-image]: https://img.shields.io/codecov/c/github/medikoo/timers-ext.svg
