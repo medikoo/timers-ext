@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.8](https://github.com/medikoo/timers-ext/compare/v0.1.7...v0.1.8) (2024-06-03)
+
+### Maintenance Improvements
+
+- Bump dependencies ([1644a83](https://github.com/medikoo/timers-ext/commit/1644a83a63dbcb239140d0574014438cf58dddca))
+- Declare minimum Node.js version ([2cb991d](https://github.com/medikoo/timers-ext/commit/2cb991d1b7a835a4a332d1d77932ad39dc54e487))
 
 <a name="0.1.7"></a>
 
