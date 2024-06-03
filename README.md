@@ -1,6 +1,5 @@
-[![Build status][nix-build-image]][nix-build-url]
-[![Windows status][win-build-image]][win-build-url]
-![Transpilation status][transpilation-image]
+[![Build status][build-image]][build-url]
+[![Tests coverage][cov-image]][cov-url]
 [![npm version][npm-image]][npm-url]
 
 # timers-ext
@@ -58,10 +57,9 @@ If _timeout_ resolves to a number:
 
     $ npm test
 
-[nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/timers-ext/branches/master/shields_badge.svg
-[nix-build-url]: https://semaphoreci.com/medikoo-org/timers-ext
-[win-build-image]: https://ci.appveyor.com/api/projects/status/2i5nerowov2ho3o9?svg=true
-[win-build-url]: https://ci.appveyor.com/project/medikoo/timers-ext
-[transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
+[build-image]: https://github.com/medikoo/timers-ext/workflows/Integrate/badge.svg
+[build-url]: https://github.com/medikoo/timers-ext/actions?query=workflow%3AIntegrate
+[cov-image]: https://img.shields.io/codecov/c/github/medikoo/timers-ext.svg
+[cov-url]: https://codecov.io/gh/medikoo/timers-ext
 [npm-image]: https://img.shields.io/npm/v/timers-ext.svg
 [npm-url]: https://www.npmjs.com/package/timers-ext
